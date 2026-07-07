@@ -1889,19 +1889,6 @@ blockquote {
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script>
-            // Total Experience Calculator
-            function calculateExperience(startDate) {
-                let currentDate = new Date();
-                let firstDate = new Date(startDate);
-                let years = currentDate.getFullYear() - firstDate.getFullYear();
-                let months = currentDate.getMonth() - firstDate.getMonth();
-                if (months < 0) {
-                    years--;
-                    months += 12;
-                }
-                return (years * 12) + months;
-            }
-    
             $(document).ready(function() {
                 // Animate counters
                 $('.counter').each(function() {
@@ -1915,25 +1902,6 @@ blockquote {
                         }
                     });
                 });
-    
-                // Calculate and animate total work experience
-                let experienceMonths = calculateExperience("2024-01-01");
-                $('#expCounter').attr('data-target', experienceMonths).text(0);
-    
-                $('#expCounter').prop('Counter', 00).animate({
-                    Counter: $('#expCounter').attr('data-target')
-                }, {
-                    duration: 3000,
-                    easing: 'swing',
-                    step: function (now) {
-                        $(this).text(Math.ceil(now));
-                    }
-                });
-    
-                // Extract the Current Business Year
-                var currentYear = new Date().getFullYear();
-                document.getElementById("currentYearId").innerHTML = currentYear;
-            });
         </script>
     </body>
     </html>
